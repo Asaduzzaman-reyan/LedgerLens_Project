@@ -1,0 +1,25 @@
+LEDGERLENS - FULL UPDATED PROJECT
+
+Start with document-intelligence/README.md (also copied as SETUP_GUIDE.md).
+The measured results are in EVALUATION_REPORT.md and document-intelligence/reports/.
+For live local AI configuration, read document-intelligence/docs/LOCAL_AI.md.
+
+Included:
+- Complete tracked backend and React frontend source
+- Built frontend, dependency manifests and frontend lockfile
+- Setup instructions, architecture, database schema, and AI disclosure
+- Automated tests, synthetic fixtures, measured evaluation, and test results
+- Captioned walkthrough video and UI screenshots
+- Portable Git bundle containing the committed project history
+
+Basic setup: extract the archive, open a terminal in document-intelligence,
+then follow README.md. Python dependencies and model weights require the
+documented downloads; this is a complete source package, not an offline
+runtime installer. Machine-specific launchers and the temporary work/
+environment are not included.
+
+To restore Git history instead of using the extracted source:
+  git clone document-intelligence.bundle ledgerlens-repository
+
+The reports distinguish synthetic development measurements from production
+claims. Docker verification and production hardening remain outstanding.

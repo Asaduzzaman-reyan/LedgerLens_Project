@@ -1,0 +1,154 @@
+{
+  "timestamp_utc": "2026-11-04T06:39:29.433839+00:00",
+  "extractor": "rules",
+  "dataset": "15 synthetic labeled files; one shared invoice template, format variants, missing fields, wrong total, two corrupt files. Not representative of real-world accuracy.",
+  "scope": "First invoice, eight header fields; does not score line items or second-sheet invoice. Timing includes cold OCR startup; excludes embeddings, network, uploads, queue waits.",
+  "documents": 15,
+  "field_accuracy": 0.9519230769230769,
+  "correct_fields": 99,
+  "total_fields": 104,
+  "success_rate_all_inputs": 0.8666666666666667,
+  "failure_rate_all_inputs": 0.1333333333333333,
+  "success_rate_valid_inputs": 1.0,
+  "expected_outcome_accuracy": 1.0,
+  "mean_seconds": 2.8260466666666666,
+  "median_seconds": 0.0599,
+  "total_seconds": 42.390699999999995,
+  "results": [
+    {
+      "file": "invoice.pdf",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 0.2361,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "incorrect-total.pdf",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 0.0216,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "missing-fields.pdf",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 0.0204,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "multipage.pdf",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 0.0088,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "invoice.png",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 15.6854,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "invoice.jpg",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 7.1831,
+      "fields_correct": 7,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "invoice.tiff",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 4.4826,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "scanned.pdf",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 3.2064,
+      "fields_correct": 7,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "poor-scan.png",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 5.503,
+      "fields_correct": 5,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "multipage.tiff",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 5.9497,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "ledger.csv",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 0.009,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "ledger.xlsx",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 0.0203,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "ledger.xls",
+      "expected_outcome": "success",
+      "actual_outcome": "success",
+      "seconds": 0.0599,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "error": null
+    },
+    {
+      "file": "corrupt.pdf",
+      "expected_outcome": "failure",
+      "actual_outcome": "failure",
+      "seconds": 0.0029,
+      "fields_correct": 0,
+      "fields_total": 0,
+      "error": "FileDataError"
+    },
+    {
+      "file": "corrupt.xlsx",
+      "expected_outcome": "failure",
+      "actual_outcome": "failure",
+      "seconds": 0.0015,
+      "fields_correct": 0,
+      "fields_total": 0,
+      "error": "BadZipFile"
+    }
+  ]
+}

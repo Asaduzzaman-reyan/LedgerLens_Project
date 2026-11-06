@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": "d60edbc84ff7442ab10523d4ac57cb89",
+      "score": 0.62124,
+      "source": "sheet Second invoice rows ending 3",
+      "snippet": "invoice_number,invoice_date,supplier_name,customer_name,subtotal,tax,total,currency,description,quantity,unit_price,amount\r\nINV-2042,2026-10-15,Northstar Office Supply,Acme Studio,250.00,25.00,275.00,USD,Desk lamp,2,50.00,100.00\r\nINV-2042,2",
+      "filename": "ledger.xlsx"
+    },
+    {
+      "id": "5e4bb25811ea4e81aa295b4543627ea1",
+      "score": 0.60747,
+      "source": "page 1",
+      "snippet": "INVOICE\n\nInvoice number: INV-1042\n\nInvoice date: 2026-10-15\n\nSupplier: Northstar Office Supply\n\nCustomer: Acme Studio\n\nSubtotal: 250.00\n\nTax: 25.00\n\nTotal: 275.00\n\nCurrency: USD\n\nItem: Desk lamp | 2 | 50.00 | 100.00\n\nItem: Office chair | 1 ",
+      "filename": "invoice.pdf"
+    },
+    {
+      "id": "986db6e93da94c32979e403cd01a997e",
+      "score": 0.57619,
+      "source": "page 1",
+      "snippet": "INVOICE\n\nInvoice number: INV-1043\n\nInvoice date: 2026-10-15\n\nSupplier: Harbor Technology\n\nCustomer: Acme Studio\n\nSubtotal: 250.00\n\nTax: 25.00\n\nTotal: 290.00\n\nCurrency: USD\n\nItem: Desk lamp | 2 | 50.00 | 100.00\n\nItem: Office chair | 1 | 150.",
+      "filename": "incorrect-total.pdf"
+    }
+  ],
+  "model": "BAAI/bge-small-en-v1.5"
+}

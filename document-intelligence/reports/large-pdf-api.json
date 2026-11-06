@@ -1,0 +1,8 @@
+{
+  "pages": 1000,
+  "invoices": 1000,
+  "status": "review",
+  "wall_seconds": 50.5447,
+  "worker_seconds": 48.8403,
+  "scope": "In-process FastAPI TestClient upload, durable queue, digital parsing, rules extraction, validation and SQLite writes. No browser/network transit, OCR, LLM or semantic indexing."
+}

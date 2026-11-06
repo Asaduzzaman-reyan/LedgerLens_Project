@@ -1,0 +1,130 @@
+{
+  "seconds": 57.743963199987775,
+  "status": "review",
+  "result": [
+    {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD",
+      "line_items": [
+        {
+          "description": "Desk lamp",
+          "quantity": "2",
+          "unit_price": "50.00",
+          "amount": "100.00"
+        },
+        {
+          "description": "Office chair",
+          "quantity": "1",
+          "unit_price": "150.00",
+          "amount": "150.00"
+        }
+      ],
+      "evidence": {
+        "invoice_number": "INV-1042",
+        "invoice_date": "2026-10-15",
+        "supplier_name": "Northstar Office Supply",
+        "customer_name": "Acme Studio",
+        "subtotal": "250.00",
+        "tax": "25.00",
+        "total": "275.00",
+        "currency": "USD"
+      },
+      "uncertain_fields": [
+        "invoice_number",
+        "invoice_date",
+        "supplier_name",
+        "customer_name",
+        "subtotal",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "sources": [
+        "page 1"
+      ],
+      "method": "llm"
+    }
+  ],
+  "errors": [
+    {
+      "invoice": 0,
+      "field": "invoice_number",
+      "code": "uncertain",
+      "message": "Extraction requires source verification"
+    },
+    {
+      "invoice": 0,
+      "field": "invoice_date",
+      "code": "uncertain",
+      "message": "Extraction requires source verification"
+    },
+    {
+      "invoice": 0,
+      "field": "supplier_name",
+      "code": "uncertain",
+      "message": "Extraction requires source verification"
+    },
+    {
+      "invoice": 0,
+      "field": "customer_name",
+      "code": "uncertain",
+      "message": "Extraction requires source verification"
+    },
+    {
+      "invoice": 0,
+      "field": "subtotal",
+      "code": "uncertain",
+      "message": "Extraction requires source verification"
+    },
+    {
+      "invoice": 0,
+      "field": "tax",
+      "code": "uncertain",
+      "message": "Extraction requires source verification"
+    },
+    {
+      "invoice": 0,
+      "field": "total",
+      "code": "uncertain",
+      "message": "Extraction requires source verification"
+    },
+    {
+      "invoice": 0,
+      "field": "currency",
+      "code": "uncertain",
+      "message": "Extraction requires source verification"
+    }
+  ],
+  "history": [
+    {
+      "time": 1793775954.8534625,
+      "event": "uploaded",
+      "detail": {
+        "size": 1593
+      }
+    },
+    {
+      "time": 1793775955.2912862,
+      "event": "processing",
+      "detail": {
+        "extractor": "llm"
+      }
+    },
+    {
+      "time": 1793776012.2554173,
+      "event": "processed",
+      "detail": {
+        "status": "review",
+        "units": 1,
+        "invoices": 1
+      }
+    }
+  ],
+  "scope": "Actual TestClient upload -> durable worker -> local LLM -> evidence validation -> database. Embeddings disabled."
+}

@@ -1,0 +1,31 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Application data and local caches
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# JavaScript dependencies and local build output
+node_modules/
+npm-debug.log*
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/

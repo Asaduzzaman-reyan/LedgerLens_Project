@@ -1,0 +1,8 @@
+{
+  "pages": 1000,
+  "seconds": 1.938,
+  "pages_per_second": 515.99,
+  "peak_rss_mb": 75.94,
+  "file_bytes": 534697,
+  "scope": "Digital PDF page reading and rules extraction only; excludes database, queue, embeddings, API, OCR and LLM. Single run, warm process. RSS includes libraries and prior PDF creation."
+}

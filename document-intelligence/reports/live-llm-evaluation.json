@@ -1,0 +1,304 @@
+{
+  "provider": "http://127.0.0.1:8081/v1/chat/completions",
+  "model_alias": "local-qwen",
+  "schema_constraint": true,
+  "model": "Qwen2.5-0.5B-Instruct Q4_K_M",
+  "runtime": "llama.cpp b6000, CPU, 2 threads, 4096 context",
+  "scope": "Three synthetic fixture variants; first-invoice header fields only; local live LLM plus grounding validation. Smoke evaluation, not a representative benchmark. OCR included for poor-scan.png.",
+  "fields_correct": 23,
+  "fields_total": 24,
+  "successful_responses": 3,
+  "files": 3,
+  "results": [
+    {
+      "file": "invoice.pdf",
+      "seconds": 18.7175,
+      "error": null,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "invoices": [
+        {
+          "invoice_number": "INV-1042",
+          "invoice_date": "2026-10-15",
+          "supplier_name": "Northstar Office Supply",
+          "customer_name": "Acme Studio",
+          "subtotal": "250.00",
+          "tax": "25.00",
+          "total": "275.00",
+          "currency": "USD",
+          "line_items": [
+            {
+              "description": "Desk lamp",
+              "quantity": "2",
+              "unit_price": "50.00",
+              "amount": "100.00"
+            },
+            {
+              "description": "Office chair",
+              "quantity": "1",
+              "unit_price": "150.00",
+              "amount": "150.00"
+            }
+          ],
+          "evidence": {
+            "invoice_number": "INV-1042",
+            "invoice_date": "2026-10-15",
+            "supplier_name": "Northstar Office Supply",
+            "customer_name": "Acme Studio",
+            "subtotal": "250.00",
+            "tax": "25.00",
+            "total": "275.00",
+            "currency": "USD"
+          },
+          "uncertain_fields": [
+            "invoice_number",
+            "invoice_date",
+            "supplier_name",
+            "customer_name",
+            "subtotal",
+            "tax",
+            "total",
+            "currency"
+          ],
+          "sources": [
+            "page 1"
+          ],
+          "method": "llm"
+        }
+      ],
+      "validation": [
+        {
+          "invoice": 0,
+          "field": "invoice_number",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "invoice_date",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "supplier_name",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "customer_name",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "subtotal",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "tax",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "total",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "currency",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        }
+      ]
+    },
+    {
+      "file": "missing-fields.pdf",
+      "seconds": 17.55,
+      "error": null,
+      "fields_correct": 8,
+      "fields_total": 8,
+      "invoices": [
+        {
+          "invoice_number": "INV-1044",
+          "invoice_date": "2026-10-15",
+          "supplier_name": "Northstar Office Supply",
+          "customer_name": null,
+          "subtotal": "250.00",
+          "tax": null,
+          "total": "275.00",
+          "currency": "USD",
+          "line_items": [
+            {
+              "description": "Desk lamp",
+              "quantity": "2",
+              "unit_price": "50.00",
+              "amount": "100.00"
+            },
+            {
+              "description": "Office chair",
+              "quantity": "1",
+              "unit_price": "150.00",
+              "amount": "150.00"
+            }
+          ],
+          "evidence": {
+            "invoice_number": "INV-1044",
+            "invoice_date": "2026-10-15",
+            "supplier_name": "Northstar Office Supply",
+            "customer_name": "null",
+            "subtotal": "250.00",
+            "tax": "null",
+            "total": "275.00",
+            "currency": "USD"
+          },
+          "uncertain_fields": [
+            "invoice_number",
+            "invoice_date",
+            "supplier_name",
+            "customer_name",
+            "subtotal",
+            "tax",
+            "total",
+            "currency"
+          ],
+          "sources": [
+            "page 1"
+          ],
+          "method": "llm"
+        }
+      ],
+      "validation": [
+        {
+          "invoice": 0,
+          "field": "customer_name",
+          "code": "missing",
+          "message": "Required value is missing or unresolved"
+        },
+        {
+          "invoice": 0,
+          "field": "tax",
+          "code": "missing",
+          "message": "Required value is missing or unresolved"
+        },
+        {
+          "invoice": 0,
+          "field": "invoice_number",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "invoice_date",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "supplier_name",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "customer_name",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "subtotal",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "tax",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "total",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "currency",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        }
+      ]
+    },
+    {
+      "file": "poor-scan.png",
+      "seconds": 45.214,
+      "error": null,
+      "fields_correct": 7,
+      "fields_total": 8,
+      "invoices": [
+        {
+          "invoice_number": "INV-1042",
+          "invoice_date": "2026-10-15",
+          "supplier_name": "Northstar OfficeSupply",
+          "customer_name": "Acme Studio",
+          "subtotal": "250.00",
+          "tax": "25.00",
+          "total": "275.00",
+          "currency": "USD",
+          "line_items": [
+            {
+              "description": "Desklamp|2|50.00|100.00",
+              "quantity": "1",
+              "unit_price": "50.00",
+              "amount": "50.00"
+            },
+            {
+              "description": "Office chair|1|150.00|150.00",
+              "quantity": "1",
+              "unit_price": "150.00",
+              "amount": "150.00"
+            }
+          ],
+          "evidence": {
+            "invoice_number": "INV-1042",
+            "invoice_date": "2026-10-15",
+            "supplier_name": "Northstar OfficeSupply",
+            "customer_name": "Acme Studio",
+            "subtotal": "250.00",
+            "tax": "25.00",
+            "total": "275.00",
+            "currency": "USD"
+          },
+          "uncertain_fields": [
+            "Item"
+          ],
+          "sources": [
+            "frame 1"
+          ],
+          "method": "llm"
+        }
+      ],
+      "validation": [
+        {
+          "invoice": 0,
+          "field": "Item",
+          "code": "uncertain",
+          "message": "Extraction requires source verification"
+        },
+        {
+          "invoice": 0,
+          "field": "subtotal",
+          "code": "items_mismatch",
+          "message": "Sum of line amounts does not equal subtotal"
+        }
+      ]
+    }
+  ]
+}

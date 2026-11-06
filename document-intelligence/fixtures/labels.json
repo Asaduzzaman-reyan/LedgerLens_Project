@@ -1,0 +1,194 @@
+[
+  {
+    "file": "invoice.pdf",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "incorrect-total.pdf",
+    "expected": {
+      "invoice_number": "INV-1043",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Harbor Technology",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "290.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "missing-fields.pdf",
+    "expected": {
+      "invoice_number": "INV-1044",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "subtotal": "250.00",
+      "total": "275.00",
+      "currency": "USD",
+      "tax": null,
+      "customer_name": null
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "multipage.pdf",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "invoice.png",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "invoice.jpg",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "invoice.tiff",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "scanned.pdf",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "poor-scan.png",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "multipage.tiff",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "ledger.csv",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "ledger.xlsx",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "ledger.xls",
+    "expected": {
+      "invoice_number": "INV-1042",
+      "invoice_date": "2026-10-15",
+      "supplier_name": "Northstar Office Supply",
+      "customer_name": "Acme Studio",
+      "subtotal": "250.00",
+      "tax": "25.00",
+      "total": "275.00",
+      "currency": "USD"
+    },
+    "expected_outcome": "success"
+  },
+  {
+    "file": "corrupt.pdf",
+    "expected": {},
+    "expected_outcome": "failure"
+  },
+  {
+    "file": "corrupt.xlsx",
+    "expected": {},
+    "expected_outcome": "failure"
+  }
+]

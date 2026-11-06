@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DOCINT_TOKEN: ${DOCINT_TOKEN:-}
+      DOCINT_EXTRACTOR: ${DOCINT_EXTRACTOR:-rules}
+      DOCINT_EMBEDDINGS: ${DOCINT_EMBEDDINGS:-fastembed}
+      DOCINT_LLM_URL: ${DOCINT_LLM_URL:-http://host.docker.internal:11434/v1/chat/completions}
+      DOCINT_LLM_MODEL: ${DOCINT_LLM_MODEL:-qwen2.5:7b}
+      DOCINT_LLM_KEY: ${DOCINT_LLM_KEY:-}
+    volumes:
+      - document-data:/app/data
+    restart: unless-stopped
+volumes:
+  document-data:
